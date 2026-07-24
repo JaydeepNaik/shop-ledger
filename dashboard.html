@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shop Ledger Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <div class="header">
+
+        <div>
+            <h1>📒 Shop Ledger</h1>
+            <p id="welcomeUser"></p>
+        </div>
+
+        <button class="logout" id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+
+    <div class="card-grid">
+
+        <div class="expense-card">
+
+            <h2>☕ Chai</h2>
+
+            <p>₹15</p>
+
+            <button class="addBtn"
+            onclick="addExpense('Chai',15)">
+                Add
+            </button>
+
+        </div>
+
+        <div class="expense-card">
+
+            <h2>🚬 Cigarette Shift</h2>
+
+            <p>₹20</p>
+
+            <button class="addBtn"
+            onclick="addExpense('Cigarette Shift',20)">
+                Add
+            </button>
+
+        </div>
+
+        <div class="expense-card">
+
+            <h2>🚬 Gold Flake</h2>
+
+            <p>₹15</p>
+
+            <button class="addBtn"
+            onclick="addExpense('Gold Flake',15)">
+                Add
+            </button>
+
+        </div>
+
+        <div class="expense-card">
+
+            <h2>💰 Advance</h2>
+
+            <p>₹25</p>
+
+            <button class="addBtn"
+            onclick="addExpense('Advance',25)">
+                Add
+            </button>
+
+        </div>
+
+        <div class="expense-card">
+
+            <h2>➕ Other</h2>
+
+            <p>Add Custom Expense</p>
+
+            <button class="addBtn"
+            onclick="addOtherExpense()">
+
+                Add Item
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="summary">
+
+        <h2>Today's Expenses</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>Item</th>
+
+                <th>Price</th>
+
+                <th>Time</th>
+
+                <th>Action</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="expenseTable">
+
+            </tbody>
+
+        </table>
+
+        <div class="total">
+
+            Total : ₹<span id="totalAmount">0</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
